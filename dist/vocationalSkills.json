@@ -176,34 +176,19 @@ getSkillData([
     "checked": false
   },
   {
-    "name": "催筋裂骨(22级)",
-    "value": "催筋裂骨",
+    "name": "光芒之盾(22级)",
+    "value": "光芒之盾",
     "skillAttribute": [
-      "衰弱",
-      "衰弱",
-      "衰弱"
+      "回复最大生命值+18%,全减益免疫",
+      "回复最大法力值+18%",
+      "免伤护盾+3"
     ],
     "round": 3,
     "additionalAttackTimes": "无",
-    "skillConsumption": "320法力",
+    "skillConsumption": "1800法力",
     "attackMode": "祝福",
-    "range": "敌六人长方",
-    "armsLimitation": "无",
-    "checked": false
-  },
-  {
-    "name": "催筋裂骨(22级)",
-    "value": "催筋裂骨",
-    "skillAttribute": [
-      "清除目标减益状态",
-      "清除目标增益状态"
-    ],
-    "round": 3,
-    "additionalAttackTimes": "无",
-    "skillConsumption": "320法力",
-    "attackMode": "祝福",
-    "range": "敌六人长方",
-    "armsLimitation": "无",
+    "range": "我全体",
+    "armsLimitation": "无限制",
     "checked": false
   }
 ])

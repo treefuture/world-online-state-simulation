@@ -176,33 +176,65 @@
     "checked": false
   },
   {
-    "name": "催筋裂骨(22级)",
-    "value": "催筋裂骨",
+    "name": "光芒之盾(22级)",
+    "value": "光芒之盾",
     "skillAttribute": [
-      "衰弱",
-      "衰弱",
-      "衰弱"
+      "回复最大生命值+18%,全减益免疫",
+      "回复最大法力值+18%",
+      "免伤护盾+3"
     ],
     "round": 3,
     "additionalAttackTimes": "无",
-    "skillConsumption": "320法力",
+    "skillConsumption": "1800法力",
     "attackMode": "祝福",
-    "range": "敌六人长方",
+    "range": "我全体",
+    "armsLimitation": "无限制",
+    "checked": false
+  },
+  {
+    "name": "闪光弹(8级)",
+    "value": "闪光弹",
+    "skillAttribute": [
+      "躲闪-45%",
+      "物理命中率-45%",
+      "反击-45%"
+    ],
+    "round": 2,
+    "additionalAttackTimes": "无",
+    "skillConsumption": "250法力",
+    "attackMode": "祝福",
+    "range": "敌当前生命最大者",
+    "describe": "8级及以下为敌当前生命最大者,9级为十字",
+    "checked": false
+  },
+  {
+    "name": "解除魔法(22级)",
+    "value": "解除魔法",
+    "skillAttribute": [
+      "清除目标增益状态",
+      "清除目标减益状态",
+      "扣除最大法力值8%，封魔"
+    ],
+    "round": 2,
+    "additionalAttackTimes": "无",
+    "skillConsumption": "300法力",
+    "attackMode": "祝福",
+    "range": "敌全体",
     "armsLimitation": "无",
     "checked": false
   },
   {
-    "name": "催筋裂骨(22级)",
-    "value": "催筋裂骨",
+    "name": "幻影法球(22级)",
+    "value": "幻影法球",
     "skillAttribute": [
-      "清除目标减益状态",
-      "清除目标增益状态"
+      "每回合自动恢复法力+406,幻影",
+      "每回合自动恢复生命+200"
     ],
-    "round": 3,
+    "round": 6,
     "additionalAttackTimes": "无",
-    "skillConsumption": "320法力",
+    "skillConsumption": "473法力",
     "attackMode": "祝福",
-    "range": "敌六人长方",
+    "range": "我十字",
     "armsLimitation": "无",
     "checked": false
   }
