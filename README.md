@@ -8,6 +8,14 @@
 
 
 
+## 更改说明
+
+目前项目可以直接运行，如果需要更改：包管理工具目前使用的是 `npm`，如果需要切换其他包管理工具先把 `package-lock.json` 删掉，避免冲突。
+
+下载第三方库后在 `index.js` 里面导入，然后暴露在 `window` 全局引入；使用 `babel` 不能一起写 `type = module` 所以需要使用 `index.js` 暴露。需要注意的是 `index.js` 暴露后需要使用 `npx webpack` 重新打一下包，`index.html`  依靠的暴露文件是 `index.js` 打包后的 `bundle.js`
+
+
+
 # 使用说明
 
 #### 1.小白请通过百度云盘下载，然后点击执行 `dist` 目录下的 `index.html` 文件即可

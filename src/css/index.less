@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+.loading {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+  .loadingMassage {
+    margin: auto;
+  }
+}
+
 #box {
   width: 100%;
   padding: 0 15px;
@@ -26,11 +36,40 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .flex {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .flexCenter {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  .skillSelect {
+    margin: 20px 0;
+
+    .search {
+      padding: 15px 5px;
+      height: 15px;
+    }
+
+    .skillLevel {
+      margin-left: 20px;
+    }
+  }
+
+  .prompt {
+    font-size: 18px;
+  }
+
   #console {
     position: absolute;
     top: 120%;
     left: 50%;
     transform: translate(-50%);
+    padding-bottom: 50px;
 
     h3,
     p {
@@ -39,19 +78,18 @@
 
     .skillFlex {
       display: flex;
+      gap: 12px;
       flex-wrap: wrap;
       min-width: 280px;
       max-width: 880px;
       padding-top: 12px;
-      max-height: 200px;
-      overflow-y: auto;
-      // background: skyblue;
       justify-content: safe center;
     }
 
     .skill,
+    .primary,
     .nextRand,
-    .skillChacked {
+    .skillChecked {
       outline: none;
       cursor: pointer;
       color: #409eff;
@@ -62,12 +100,8 @@
       border: 1px solid #dcdfe6;
     }
 
-    .skill,
-    .skillChacked {
-      margin-bottom: 12px;
-    }
-
     .skill:hover,
+    .primary:hover,
     .nextRand:hover {
       color: #fff;
       background: #409eff;
@@ -75,6 +109,7 @@
     }
 
     .skill:active,
+    .primary:active,
     .nextRand:active {
       color: #fff;
       outline: none;
@@ -82,27 +117,27 @@
       border-color: #3a8ee6;
     }
 
-    .skillChacked {
+    .skillChecked {
       color: #fff;
       background-color: #f56c6c;
       border-color: #f56c6c;
       border: 1px solid transparent;
     }
 
-    .skillChacked:hover {
+    .skillChecked:hover {
       background: #f78989;
       border-color: #f78989;
       border: 1px solid transparent;
     }
 
-    .skillChacked:active {
+    .skillChecked:active {
       background: #dd6161;
       border-color: #dd6161;
       border: 1px solid transparent;
     }
 
     .skill:not(.skill:nth-of-type(1)),
-    .skillChacked:not(.skillChacked:nth-of-type(1)) {
+    .skillChecked:not(.skillChecked:nth-of-type(1)) {
       margin-left: 8px;
     }
 
@@ -125,6 +160,7 @@
     line-height: 25px;
 
     .skillTitle {
+      z-index: 1;
       position: absolute;
       left: 50%;
       bottom: 28px;
@@ -149,10 +185,38 @@
       bottom: 0;
       transform: translate(-50%, 50%) rotate(45deg);
     }
+
+    .skillTitle.skillButton {
+      bottom: unset;
+      transform: translate(-50%, -104%);
+    }
   }
 
   .stateName:hover .skillTitle {
     display: block;
+  }
+
+  .close-icon {
+    position: relative;
+    width: 8px;
+    cursor: pointer;
+  }
+
+  .close-icon::before,
+  .close-icon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: red;
+  }
+
+  .close-icon::before {
+    transform: translate(-80%, -100%) rotate(45deg);
+  }
+
+  .close-icon::after {
+    transform: translate(-80%, -100%) rotate(-45deg);
   }
 
   .expire {
